@@ -231,12 +231,18 @@ export default function App() {
      Dependency array MUST be: [searchTerm, users]
      ========================================================= */
   useEffect(() => {
-    if (searchTerm === "") {
+    const normalizedSearchTerm = searchTerm.trim().toLowerCase();
+
+    if (normalizedSearchTerm === "") {
       setFilteredUsers(users);
-    } else {
-      const filtered = users.filter((user) => user.name.toLowerCase().includes(searchTerm.toLowerCase()));
-      setFilteredUsers(filtered);
+      return;
     }
+
+    const filtered = users.filter((user) =>
+      user.name.toLowerCase().includes(normalizedSearchTerm),
+    );
+
+    setFilteredUsers(filtered);
   }, [searchTerm, users]);
 
   // Modal handlers (already complete)
