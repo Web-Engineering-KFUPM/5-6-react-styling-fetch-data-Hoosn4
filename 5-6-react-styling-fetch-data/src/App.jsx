@@ -1,4 +1,4 @@
-/*
+﻿/*
 ===================================================================
 React Lab - USER MANAGEMENT DASHBOARD
 ===================================================================
@@ -38,7 +38,7 @@ LAB SETUP INSTRUCTIONS
       >
 
 =============================================================
-TODO 1 — BOOTSTRAP LAYOUT + USER LIST GRID + EMPTY STATE
+TODO 1 â€” BOOTSTRAP LAYOUT + USER LIST GRID + EMPTY STATE
 =============================================================
 TODO 1.1: File: src/App.jsx
 - In the <header> tag, set className to EXACTLY:
@@ -69,7 +69,7 @@ TODO 1.3: File: src/components/UserList.jsx
        <UserCard user={user} onUserClick={onUserClick} />
 
 =============================================================
-TODO 2 — FETCH USERS + FILTER USERS BY NAME
+TODO 2 â€” FETCH USERS + FILTER USERS BY NAME
 =============================================================
 TODO 2.1: File: src/App.jsx
 Implement the fetch logic inside the first useEffect.
@@ -90,7 +90,7 @@ Requirements (write EXACT behavior):
 
 Hint:
 - Use an async function inside useEffect, then call it.
-- Check response.ok and throw an Error if it’s false (otherwise errors won’t go to catch cleanly).
+- Check response.ok and throw an Error if itâ€™s false (otherwise errors wonâ€™t go to catch cleanly).
 
 TODO 2.2: File: src/App.jsx
 Implement the filtering logic inside the second useEffect.
@@ -103,13 +103,13 @@ Requirements:
    - case-insensitive match using includes()
    - then setFilteredUsers(filtered)
    Hint:
-      - Always compute from the full users array, not from filteredUsers (prevents “double filtering” bugs).
+      - Always compute from the full users array, not from filteredUsers (prevents â€œdouble filteringâ€ bugs).
       - Make sure .toLowerCase() is applied to both user.name and searchTerm.
 Dependency array MUST be:
    [searchTerm, users]
 
 =============================================================
-TODO C1 — VIEW DETAILS BUTTON + USER DETAILS MODAL
+TODO C1 â€” VIEW DETAILS BUTTON + USER DETAILS MODAL
 =============================================================
 TODO 3.1: File: src/components/UserCard.jsx
 Implement:
@@ -197,7 +197,7 @@ export default function App() {
   const [selectedUser, setSelectedUser] = useState(null);
 
   /* =========================================================
-     TODO 2.1 — FETCH USERS (Runs once)
+     TODO 2.1 â€” FETCH USERS (Runs once)
      File: src/App.jsx
      ---------------------------------------------------------
      Implement fetch logic inside this useEffect.
@@ -224,7 +224,7 @@ export default function App() {
   }, []);
 
   /* =========================================================
-     TODO 2.2 — FILTER USERS BY NAME
+     TODO 2.2 â€” FILTER USERS BY NAME
      File: src/App.jsx
      ---------------------------------------------------------
      Implement filtering logic inside this useEffect.
@@ -280,7 +280,7 @@ export default function App() {
       {/* TODO 1.1: Set footer className EXACTLY as in lab instructions */}
       <footer className="bg-light py-4 mt-5">
         <Container>
-          <small className="text-muted">SWE 363 — React Lab</small>
+          <small className="text-muted">SWE 363 â€” React Lab</small>
         </Container>
       </footer>
     </div>
