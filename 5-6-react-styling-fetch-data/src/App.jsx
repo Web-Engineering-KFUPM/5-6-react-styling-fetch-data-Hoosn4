@@ -231,18 +231,14 @@ export default function App() {
      Dependency array MUST be: [searchTerm, users]
      ========================================================= */
   useEffect(() => {
-    // TODO 2.2 Implementation: Filter by searchTerm
-    // Check if searchTerm is empty
     if (searchTerm === "") {
-      // If empty, show all users
       setFilteredUsers(users);
-    } else {
-      // Otherwise filter by name
-      const filtered = users.filter((user) =>
-        user.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredUsers(filtered);
+      return;
     }
+    const filtered = users.filter((user) =>
+      user.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredUsers(filtered);
   }, [searchTerm, users]);
 
   // Modal handlers (already complete)
